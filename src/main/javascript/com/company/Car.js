@@ -20,6 +20,8 @@ Car.prototype = {
 		} else {
 			return '$1500 - 30000';
 		}
+		// adding an issue on purpose here...
+		alert('foo')
 	},
 
 	startEngine : function() {
