@@ -16,9 +16,6 @@ var Vehicle = function(brand, model, year) {
 
 
 // single line comments line 1
-// single line comments line 2
-// single line comments line 3
-// single line comments line 4
 Vehicle.prototype = {
 
 	getFullName : function() {
@@ -47,6 +44,7 @@ Vehicle.prototype = {
 	},
 
 	tuneCar : function() {
+		let unusedVar;
 		this.year = '2011';
 	}
 
