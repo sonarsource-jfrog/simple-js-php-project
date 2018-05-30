@@ -11,8 +11,12 @@ jdk:
   - oraclejdk8
 
 script:
-  - echo $SONAR_SCANNER_PARAMS
+  # This is the actual analysis - here done by our standard SonarScanner CLI (but it could be with the Maven Scanner, Gradle Scanner, ...)
   - sonar-scanner
+  # Once this is executed, you can find details about the processing of the analysis report in the "report-task.txt" file,
+  # more precisely the "ceTaskId" which will be passed in the payload once the report has been processed (asynchronous operation)
+  - cat .sonar/report-task.txt
+  # Note that this file is located in a different folder for Maven: "target/sonar/report-task.txt"
 
 cache:
   directories:
