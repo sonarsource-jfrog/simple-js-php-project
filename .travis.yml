@@ -15,7 +15,7 @@ script:
   - sonar-scanner
   # Once this is executed, you can find details about the processing of the analysis report in the "report-task.txt" file,
   # more precisely the "ceTaskId" which will be passed in the payload once the report has been processed (asynchronous operation)
-  - cat .sonar/report-task.txt
+  - cat .scannerwork/report-task.txt
   # Note that this file is located in a different folder for Maven: "target/sonar/report-task.txt"
 
 cache:
